@@ -1,0 +1,159 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16,16,16);
+    height:100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container a{
+    text-decoration: none;
+    border: 1px solid antiquewhite;
+    padding: 2rem 5rem;
+    color: antiquewhite;
+    position: relative;
+    
+}
+.container a::before
+{    
+    font-weight: bold;   
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    color: black;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*****************************************************/
+.btn-1{     
+    transition: all 1s;
+    overflow: hidden; 
+}
+.btn-1::before
+{   
+    position: absolute;
+    content: "DOWNLOAD";   
+    transform:translateY(-100%);
+    transition: all 1s;
+    background-color:aquamarine;   
+}
+.btn-1:hover::before
+{
+    transform: translateY(0);
+
+}
+/*****************************************************/
+/*****************************************************/
+.btn-2::before
+{
+    position: absolute;
+   transform: rotateX(270deg);
+   transform-origin: top;
+   transition: all 1s;
+   background-color: blueviolet;
+   content: "BUTTON";
+
+}
+.btn-2::after
+{
+    
+    content: "BUTTON";
+    left: 0;
+    top:0;
+    height: 100%;
+    width:100%;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: chartreuse;
+}
+.btn-2:hover:before,
+.btn-2:hover:after
+{
+transform: rotateX(0deg);
+}
+/*****************************************************/
+.container a.btn-3
+{
+    background-color: transparent;
+    color:black;
+    transition: all 0.2s;
+    border:none;
+    position: relative;
+}
+.container a.btn-3::before
+{
+      content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background: #06c988a4;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: top;
+}
+.container a.btn-3::after
+{
+    content:"";
+    position: absolute;
+    
+    top:3px;
+    left:3px;
+    background-color: #ffff00a6;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin:bottom;
+}
+.container a.btn-3:hover::before
+{
+    top:-6px;
+    left:0px;
+    transform: perspective(1000px) rotate(-75deg);
+}
+.container a.btn-3:hover::after
+{
+    top:6px;
+    left:0px;
+    transform: perspective(1000px) rotate(75deg);
+}
+.container a.btn-3:hover
+{
+    color: rgb(234, 135, 6);
+    
+}
+/*********************************************************/
+.container a.btn-4
+{
+    padding: 1rem 4rem;
+    border:none;
+    background-color: rgba(17,17,137,0.824);
+    color: white;
+  
+    position: relative;
+}
+.btn-4::before
+{
+    content: "";
+    background-color: transparent;
+    border-left: 1px solid darkblue;
+    border-top: 1px solid darkblue;
+}
